@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script>
+      function hideAll()
+      {
+        $('#Profile').hide();
+        $('#Education').hide();
+        $('#KeySkills').hide();
+        $('#WorkExperience').hide();
+        $('#ContactManan').hide();
+
+      }
+
+      function showProfile()
+      {
+        hideAll();
+        $('#Profile').show();
+
+
+      }
+      function showEducation()
+      {
+        hideAll();
+        $('#Education').show();
+
+      }
+
+      function showKeySkills()
+      {
+        hideAll();
+        $('#KeySkills').show();
+
+      }
+
+      function showWorkExperience()
+      {
+        hideAll();
+        $('#WorkExperience').show();
+
+      }
+      function showContact()
+      {
+        hideAll();
+        $('#ContactManan').show();
+      }
+
+    </script>
+
+    <title>Manan Shah CV</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Ranga' rel='stylesheet'>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      body
+      {
+        font-family: "Karla";
+        font-size: 20px;
+        color:darkslategray;
+        background-color:#dddddd ;
+
+      }
+
+      #navbar { z-index: 1000; }
+
+
+      .sidebar
+      {
+        margin-left: 0px;
+        padding: 0;
+        width: 20%;
+        top: 10%;
+        font-size: 18px;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        background-color: #1F1F1F;
+
+      }
+
+      .sidebar a
+      {
+        display: block;
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+      }
+
+
+
+      .sidebar a:hover:not(.active)
+      {
+        background-color: #dddddd;
+        color: darkslategray;
+      }
+
+      .card .educationCard
+      {
+
+        color:#FFFFFF;
+        background-color:#C0392B    ;
+
+      }
+
+      .card .keySkillsCard
+      {
+
+        color:#FFFFFF;
+        background-color: #6C3483;
+
+      }
+
+      .card .experienceCard
+      {
+
+        color:#FFFFFF;
+        background-color: #34495E;
+
+      }
+      .card-title
+      {
+        color: #ffffff;
+      }
+      .card .card-text
+      {
+        font-family: "Karla";
+
+      }
+      .navbar
+      {
+
+        padding: 1px 16px;
+        height: 10%;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-size: 23px;
+        top: 0%;
+
+      }
+
+      div.content
+      {
+        margin-left: 20%;
+        margin-top: 10%;
+        padding: 1px 16px;
+        height: 100%;
+      }
+      .main
+      {
+        margin-left: 20%; /* Same as the width of the sidenav */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        margin-top: 10%;
+
+
+      }
+
+
+      @media screen and (max-width: 1890px)
+      {
+        .navbar {
+          width: 100%;
+          height: 10%;
+          z-index: 1000;
+          visibility: hidden;
+        }
+
+        .sidebar {
+          z-index: 10;
+          width: 100%;
+          height: auto;
+          margin-top:0%;
+          position: relative;
+
+        }
+        .sidebar a
+      {
+        display: block;
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+        width: 100%
+      }
+        .main
+      {
+        margin-left: 0px; /* Same as the width of the sidenav */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+
+      }
+        .sidebar a {float: left;}
+        div.content {margin-left: 0;}
+      }
+
+      @media screen and (max-width: 400px)
+      {
+
+        .sidebar a {
+          text-align: center;
+          float: none;
+        }
+        .main
+      {
+        margin-left: 0px; /* Same as the width of the sidenav */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+
+      }
+      }
+
+      .profileCard .card-title
+      {
+        color: #2c2c2c;
+
+      }
+
+      .profileCard .card-text
+      {
+        color: rgba(255, 240, 240, 0.9);
+        font-size: 30px;
+      }
+      .sticky
+      {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .cardLightBlue
+      {
+        background-color:#33AFFF;
+      }
+      .cardLightGreen
+      {
+        background-color:#28B463;
+      }
+
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50" onload="showProfile()">
+    <div id="navbar">
+    <nav class="navbar navbar-expand-sm  fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img src="D:\Users\HP\Downloads\manan_profile.jpg" height="40px"  class="rounded-circle" alt="Manan_Picture">
+              </a>Manan Shah
+        </div>
+      </div>
+    </nav>
+  </div>
+    <nav class="sidebar">
+      <ul class="nav nav-tabs list-group" id="myTab" role="tablist">
+        <li class="nav-item list-group-1"><a href="#Profile"  onclick="showProfile()" class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true"  >Profile</a></li>
+        <li class="nav-item list-group-2"><a href="#Education"  onclick="showEducation() "  class="nav-link" id="profile-tab" data-toggle="tab"  role="tab" aria-controls="profile" aria-selected="false">Education</a>
+        <li class="nav-item list-group-3" ><a href="#KeySkills"  onclick="showKeySkills()"  class="nav-link" id="profile-tab" data-toggle="tab"  role="tab" aria-controls="profile" aria-selected="false">Key Skills</a>
+        <li class="nav-item list-group-4"><a href="#WorkExperience"  onclick="showWorkExperience()"  class="nav-link" id="profile-tab" data-toggle="tab"  role="tab" aria-controls="profile" aria-selected="false">Experience</a>
+         <li class="nav-item list-group-5"><a href="#ContactManan"  onclick="showContact()"   class="nav-link" id="profile-tab" data-toggle="tab"  role="tab" aria-controls="profile" aria-selected="false">Contact Me</a>
+     </ul>
+    </nav>
+    <div class="container">
+
+      <div class="main" id="main">
+        <div id="Profile" >
+          <br>
+          <center><h2>Manan Shah</h2></center>
+          <center><h6>Software development enthusiast</h6s></center>
+            <br>
+          <center><img src="D:\Users\HP\Downloads\manan_profile.jpg" height="400px"  alt="Manan_Picture"></center>
+          <br><br>
+          <div class="card-deck">
+              <div class="card ">
+                  <div class="card-body text-center profileCard cardLightBlue">
+                      <h2 class="card-title">Born Gifted coz</h2>
+
+                    <p class="card-text">Birthday <br>9/9/99</p>
+                    <p class="card-text">Nationality <br>Indian</p>
+                  </div>
+                </div>
+
+            <div class="card ">
+              <div class="card-body cardLightGreen text-center profileCard">
+                  <h2 class="card-title">Have a tech problem?<br>Challenge me</h2>
+
+                <p class="card-text">I can, I will. <br>End of story.</p>
+              </div>
+            </div>
+
+          </div>
+          </div>
+        </div>
+
+
+        <div id="Education">
+
+
+          <div class="card  ">
+              <div class="card-body educationCard">
+                <h2 class="card-title" ><b>Maharasthra SSC board</b></h2>
+                <br>
+                <h3>
+                  <p class="card-text">Percentage:83.80% </p><p class="card-text"> School:Dastur School(Co-ed) </p>
+                </h3>
+              </div>
+            </div>
+            <br>
+            <div class="card ">
+                <div class="card-body educationCard">
+                  <h2 class="card-title " ><b>Maharasthra HSC board</b></h2>
+                  <br>
+                  <h3>
+                    <p class="card-text">Percentage:67.69% </p>
+                    <p class="card-text">JEE score 85(AIR 98,000)</p>
+                    <p class="card-text"> College:Arihant College </p>
+                  </h3>
+                </div>
+              </div>
+              <br>
+              <div class="card">
+                  <div class="card-body educationCard">
+                    <h2 class="card-title " ><b>B.Tech Computer Engineering</b></h2>
+                    <br>
+                    <h3>
+                      <p class="card-text">Current year :3rd </p>
+                      <p class="card-text"> College:Vishwakarma University </p>
+                    </h3>
+                  </div>
+                </div>
+
+
+        </div>
+
+        <div id="KeySkills">
+
+          <center><h2></h2></center>
+          <div class="card">
+            <div class="card-body keySkillsCard">
+              <h2 class="card-title text-white" >Programming Languages</h2>
+              <br>
+              <h3>
+                <p class="card-text"> PHP, C, C++, Python, HTML, CSS, Bootstrap, Android in java(Intermediate) Javascript(Intermediate), C Sharp(Intermediate)</p>
+              </h3>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card-body keySkillsCard">
+              <h2 class="card-title text-white" >Database</h2>
+              <br>
+              <h3>
+                <p class="card-text">MySQL</p>
+              </h3>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+              <div class="card-body keySkillsCard">
+                <h2 class="card-title text-white" >Basic skills at other platforms</h2>
+                <br>
+                <h3>
+                  <p class="card-text">Unity, Wordpress Plugin development</p>
+                </h3>
+              </div>
+            </div>
+
+
+
+        </div>
+        <div id="WorkExperience">
+          <div class="card ">
+              <div class="card-body experienceCard">
+                <h2 class="card-title text-white" >Work Experience</h2>
+                <br>
+                <h3>
+                  <p class="card-text">Web-Applicaion developer Intern at ASCIAN Solutions (November 2018-May 2019)</p>
+                  <p class="card-text">Web-Portal for new student data at Vishwakarma University</p>
+                  <p class="card-text">Marketing Intern at Vishwapreneur (a National Level Entreupreneur development workshop)</p>
+
+                </h3>
+              </div>
+            </div>
+          <br>
+          <div class="card">
+              <div class="card-body experienceCard">
+                <h2 class="card-title text-white" >Patents</h2>
+                <br>
+                <h3>
+                  <p class="card-text">1 Patent under application</p>
+
+                </h3>
+              </div>
+            </div>
+          <br>
+          <div class="card">
+              <div class="card-body experienceCard">
+                <h2 class="card-title text-white" >Projects</h2>
+                <br>
+                <h3>
+                  <p class="card-text">URL Shortner</p>
+                  <p class="card-text">Financial Calculator</p>
+                  <p class="card-text">Formmaker (Like Google forms with custom features)</p>
+                  <p class="card-text">Cost-Profit-Expenses-Rate Calculator for Vardhman Pavers</p>
+                  <p class="card-text">RSS reader</p>
+                  <p class="card-text">Smiley Feedback form</p>
+                  <p class="card-text">Webpage for self help booth.</p>
+                  <p class="card-text">Students data collection portal</p>
+
+                  <p class="card-text">Maze Game</p>
+                  <p class="card-text">RSS reader</p>
+                  <p class="card-text">Image recognition and replacement in Unity (Vuforia)</p>
+                  <p class="card-text">Projectile motion Simulator in Unity</p>
+                  <p class="card-text">Compass app in android</p>
+                  <p class="card-text">Android jogging recognizer</p>
+                  <p class="card-text">Android voice command recognizer</p>
+
+                  <p class="card-text">Wordpress Plugin development</p>
+
+                </h3>
+
+              </div>
+            </div>
+          <br>
+
+
+
+        </div>
+        <div id="ContactManan">
+           <br><br><center><a href="mailto:manan.s.9999@gmail.com " class="text-dark"><i class="fa fa-inbox "></i> manan.s.9999@gmail.com<br></a>
+           <br><br><a href="https://www.linkedin.com/in/manan-shah-49b090174" class="text-dark"> <i class="fa fa-linkedin "></i> linkedin.com/in/manan-shah-49b090174<br>
+            </a>
+            <br><br><i class="fa fa-phone " ></i> <text class="text-dark">+918999511181</text></center>
+
+
+      <!--  </div><footer>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        <div class="Copyright" ><center>© 2019 Copyright Manan Shah</center>
+        </footer>
+      </div>-->
+
+    </div>
+    <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+
+          }
+        }
+
+      </script>
+  </body>
+</html>
